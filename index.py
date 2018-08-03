@@ -1,7 +1,9 @@
 from flask import Flask,render_template,request,redirect,url_for,flash,session,jsonify
 from flask_socketio import SocketIO ,send,emit
+from flask_cors import CORS
 import pymysql
 app=Flask(__name__)
+CORS(app)
 app.config['SECRET_KEY'] = 'mysecret'
 socketio=SocketIO(app)
 connection=pymysql.connect(host='localhost',use_unicode=True,charset="utf8",user='root',password='',db='34analictys',autocommit=True) 
@@ -10,18 +12,6 @@ app.config['GOOGLEMAPS_KEY'] = "8JZ7i18MjFuM35dJHq70n3Hx4"
 ##GoogleMaps(app,key="AIzaSyBAY3X8atcP98Q3qgfuXC6OggI8e1UntQ0")
 ##GoogleMaps(app, key="AIzaSyBAY3X8atcP98Q3qgfuXC6OggI8e1UntQ0")
 con=connection.cursor()
-
-
-
-@app.route('/',methods=['POST','GET'])
-def index():
-    return render_template("index_1.html")
-
-
-@app.route('/main_page',methods=['POST','GET'])
-def main_page():
-    return render_template("login.html")
-
 
 @app.route('/login',methods=['POST','GET'])
 def login():
@@ -43,6 +33,34 @@ def login():
                        error="wrong name or password"
                        
         return "error"
+
+
+
+@app.route('/',methods=['POST','GET'])
+##@crossdomain(origin='*')
+def index():
+    return render_template("index_1.html")
+
+
+@app.route('/data',methods=['POST','GET'])
+def data():
+    sql="SELECT * FROM register WHERE id='"+str(session['id'])+"'"
+    con.execute(sql)
+    fetch_data=con.fetchall()
+    return jsonify(fetch_data)
+
+
+
+@app.route('/lateral_header',methods=['POST','GET'])
+def lateral_header():
+    return render_template("side_bar.html")
+
+
+@app.route('/main_page',methods=['POST','GET'])
+def main_page():
+    return render_template("login.html")
+
+
 
 
 
