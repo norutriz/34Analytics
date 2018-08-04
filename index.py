@@ -74,9 +74,18 @@ def page_2():
 def page_3():
     return render_template("page3.html")
 
+@app.route('/page_4',methods=['POST','GET'])
+def page_4():
+    return render_template("page4.html")
+
 @app.route('/logout',methods=['POST','GET'])
 def logout():
     return redirect(url_for('main_page'))
+
+@app.route('/show_site_data',methods=["POST","GET"])
+def show_site_data():
+    mac_get=request.args['mac']
+    return render_template("page5.html",mac_get=mac_get)
 
 if __name__=='__main__':
       app.secret_key="uhsd;iuasdf2f23rgvugersdfdsfsdfsdsdfswq2314123234124gergw["

@@ -1,0 +1,35 @@
+<style>
+input#mac_adress_search {
+    margin-top: 221px;
+}
+
+	#button_for_search {
+		color: blue;
+	}
+	#button_for_search:hover {
+    	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<form method="POST">
+<p><input type="text"  id="mac_adress_search"/><button id="button_for_search" >Submit</button></p>
+</form>
+<script>
+
+function search_mac_adress(){
+
+	$("#button_for_search").click(function(){
+	var mac=$("#mac_adress_search").val();
+	$.ajax({
+			url: "  https://bypzn2.cmxcisco.com/api/presence/v1/clients/?siteId=1533222154202&macaddress="+mac,
+			headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
+			success: function(result1){
+				console.log(result1);
+				$("#dwel_time2").html(result1);
+			}
+		});
+	});
+}
+</script>
