@@ -1,0 +1,80 @@
+iohfoisgdif
+<style>
+
+
+div#MACADASF {
+    /* margin-top: 77px; */
+    position: absolute;
+    top: 123px;
+}
+
+</style>
+
+<script>
+mac_adress();
+function mac_adress(){
+
+var username="marius.glod@orange.com";
+var password="C1sco123";
+   $.ajax({
+		url: " https://bypzn2.cmxcisco.com/api/presence/v1/clients/site?siteId=1533222154202",
+		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
+		success: function(result1){
+			console.log(result1);
+			
+			$("#MACADASF").html(result1);
+			
+			
+			
+		}
+	});
+	
+	
+	
+}
+
+</script>
+<div class="MAC_Adress" id="MACADASF">
+
+
+
+
+
+
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+	  <thead>
+	    <tr>
+	      <th class="mdl-data-table__cell--non-numeric"></th>
+	      <th>Mac</th>
+	      <th>Link</th>
+	      
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td class="mdl-data-table__cell--non-numeric">1</td>
+	      <td id="Passerbys"></td>
+	      <td id="dwel_time">25</td>
+	      
+	    </tr>
+	    <tr>
+	      <td class="mdl-data-table__cell--non-numeric">2</td>
+	      <td id="3_paserby">25</td>
+	      <td id="cone2">$2.90</td>
+
+	     
+	    </tr>
+	
+		
+		
+		
+	
+	  </tbody>
+	</table>
+
+
+
+
+
+</div>

@@ -22,18 +22,7 @@
         <!-- include content2.html -->
     {% endif %}
 	
-	<script>
-var username="marius.glod@orange.com";
-var password="C1sco123";
-   $.ajax({
-		url: "https://bypzn2.cmxcisco.com/api/presence/v1/clients/?siteId=1533222154202&macaddress=4C-0F-6E-FF-D7-BB",
-		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
-		success: function(result){
-			console.log(result);
-		}
-	});
-
-</script>
+	
 {% endblock %}
 
 

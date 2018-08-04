@@ -62,10 +62,21 @@ def main_page():
 
 
 
+@app.route('/page_1',methods=['POST','GET'])
+def page_1():
+    return render_template("page_1.html")
 
+@app.route('/page_2',methods=['POST','GET'])
+def page_2():
+    return render_template("page_2.html")
 
+@app.route('/page_3',methods=['POST','GET'])
+def page_3():
+    return render_template("page3.html")
 
-
+@app.route('/logout',methods=['POST','GET'])
+def logout():
+    return redirect(url_for('main_page'))
 
 if __name__=='__main__':
       app.secret_key="uhsd;iuasdf2f23rgvugersdfdsfsdfsdsdfswq2314123234124gergw["
