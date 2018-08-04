@@ -111,8 +111,17 @@ div#peoaple4 {
 	z-index:10 !important;
 }
 .Summary {
-    margin-left: -785px;
-	z-index:11 !important;
+    margin-left: 0x;
+	z-index:99999 !important;
+}
+table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp {
+    margin-left: -68px;
+    margin-top: 26px;
+}
+div#summary123 {
+    position: absolute;
+    top: 12px;
+    left: 521px;
 }
 </style>
 	</head>
@@ -158,24 +167,21 @@ div#peoaple4 {
             </ul>
           </div>
         </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+     <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href="#" onclick="find_page(1);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href="#" onclick="find_page(2);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>MAC Adress</a>
-          <a class="mdl-navigation__link" href="#" onclick="find_page(3);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Statics</a>
-          <a class="mdl-navigation__link" href="#" onclick="find_page(4);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-          <a class="mdl-navigation__link" href="" onclick="find_page(5);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-          <a class="mdl-navigation__link" href="" onclick="find_page(6);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
-          <a class="mdl-navigation__link" href="/logout"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Logout</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(2);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">table_chart</i>MAC Adress</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(3);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">show_chart</i>Statics</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(4);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">info</i>MyMac</a>
+          <a class="mdl-navigation__link" href="/logout"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">arrow_forward</i>Logout</a>
           <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
           <div class=" main_page_1">
-<div id="all_peoaple" ><div class="topV_1"><center> Summary <div id="peoaple4"></div></center></div></div>
+		  
+<div id="all_peoaple" ><div class="topV_1"> Summary <div id="peoaple4"></div></div></div>
+<div id="summary123">Summary</div>
 <div id="all_peoaple_2" ><div class="topV"><center>Total Visitors <div id="peoaple2"></div></center></div></div>
 <div id="all_peoaple_3" ><div class="topV_2"><center>Last 5 hours <div id="peoaple3"></div></center></div></div>
 </div>
@@ -282,6 +288,8 @@ $("#main_page").load("/page_2");
 }else if(page==3){
 $("#main_page").load("/page_3");
 
+}else if(page==4){
+$("#main_page").load("/page_4")
 }
 
 }
@@ -297,7 +305,7 @@ var password="C1sco123";
 		url: "https://bypzn2.cmxcisco.com/api/presence/v1/connected/total/lastweek?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result){
-			console.log(result);
+			
 			$("#peoaple4").html(result);
 		}
 	});

@@ -53,7 +53,7 @@ var password="C1sco123";
 		url: " https://bypzn2.cmxcisco.com/api/presence/v1/passerby/count/today?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#Passerbys").html(result1);
 		}
 	});
@@ -62,7 +62,7 @@ var password="C1sco123";
 		url: " https://bypzn2.cmxcisco.com/api/presence/v1/passerby/count/3days?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+
 			$("#3_paserby").html(result1);
 		}
 	});
@@ -72,7 +72,7 @@ var password="C1sco123";
 		url: " https://bypzn2.cmxcisco.com/api/presence/v1/passerby/count/lastweek?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#7_passerby").html(result1);
 		}
 	});
@@ -81,7 +81,7 @@ var password="C1sco123";
 		url: " https://bypzn2.cmxcisco.com/api/presence/v1/connected/count/today?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#cone1").html(result1);
 		}
 	});
@@ -89,7 +89,7 @@ var password="C1sco123";
 		url: " 	https://bypzn2.cmxcisco.com/api/presence/v1/connected/total/3days?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#cone2").html(result1);
 		}
 	});
@@ -97,7 +97,7 @@ var password="C1sco123";
 		url: " 	https://bypzn2.cmxcisco.com/api/presence/v1/connected/total/lastweek?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+
 			$("#cone3").html(result1);
 		}
 	});
@@ -105,7 +105,7 @@ var password="C1sco123";
 		url: " 	https://bypzn2.cmxcisco.com/api/presence/v1/visitor/count/today?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+
 			$("#visit1").html(result1);
 		}
 	});
@@ -113,7 +113,7 @@ var password="C1sco123";
 		url: "  https://bypzn2.cmxcisco.com/api/presence/v1/visitor/count/3days?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#visit2").html(result1);
 		}
 	});
@@ -122,7 +122,7 @@ var password="C1sco123";
 		url: " 	https://bypzn2.cmxcisco.com/api/presence/v1/visitor/count/lastweek?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#visit3").html(result1);
 		}
 	});
@@ -132,7 +132,7 @@ var password="C1sco123";
 		url: " 	https://bypzn2.cmxcisco.com/api/presence/v1/dwell/average/today?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#dwel_time").html(result1);
 		}
 	});
@@ -140,7 +140,7 @@ var password="C1sco123";
 		url: "  https://bypzn2.cmxcisco.com/api/presence/v1/dwell/average/3days?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#dwel_time2").html(result1);
 		}
 	});
@@ -149,7 +149,7 @@ var password="C1sco123";
 		url: " 	https://bypzn2.cmxcisco.com/api/presence/v1/dwell/average/lastweek?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			console.log(result1);
+			
 			$("#dwel_time3").html(result1);
 		}
 	});
@@ -176,28 +176,28 @@ var password="C1sco123";
 	    <tr>
 	      <td class="mdl-data-table__cell--non-numeric">Astăzi</td>
 	      <td id="Passerbys"></td>
-	      <td id="cone1">$2.90</td>
+	      <td id="cone1"></td>
 	    
-	      <td id="visit1">$2.90</td>
-	      <td id="dwel_time">25</td>
+	      <td id="visit1"></td>
+	      <td id="dwel_time"></td>
 	      
 	    </tr>
 	    <tr>
 	      <td class="mdl-data-table__cell--non-numeric">Ultimele 3 zile</td>
-	      <td id="3_paserby">25</td>
-	      <td id="cone2">$2.90</td>
+	      <td id="3_paserby"></td>
+	      <td id="cone2"></td>
 	     
-	      <td id="visit2">$2.90</td>
-	      <td id="dwel_time2">25</td>
+	      <td id="visit2"></td>
+	      <td id="dwel_time2"></td>
 	     
 	    </tr>
 	    <tr>
 	      <td class="mdl-data-table__cell--non-numeric">Ultima săptămână</td>
-	      <td id="7_passerby">25</td>
-	      <td id="cone3">$2.90</td>
+	      <td id="7_passerby"></td>
+	      <td id="cone3"></td>
 	     
-	      <td id="visit3">$2.90</td>
-	      <td id="dwel_time3">25</td>
+	      <td id="visit3"></td>
+	      <td id="dwel_time3"></td>
 	    
 	    </tr>
 	  </tbody>

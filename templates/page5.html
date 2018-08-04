@@ -1,4 +1,19 @@
 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Profile</title>
+
+	
+	<!--[if IE]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.2.0/es5-shim.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+<![endif]-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="../static/styles.css">
+
 <style>
 
 
@@ -32,10 +47,10 @@ function mac_adress(start,finish){
 var username="marius.glod@orange.com";
 var password="C1sco123";
    $.ajax({
-		url: " https://bypzn2.cmxcisco.com/api/presence/v1/clients?siteId=1533222154202",
+		url: " https://bypzn2.cmxcisco.com/api/presence/v1/clients/?siteId=1533222154202&macaddress={{mac_get}}",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(result1){
-			
+			console.log(result1);
 			for(i=start;i<=finish;i++){
 			$("#mac_adress_1").append("<tr><td id='number_mac' class='mdl-data-table__cell--non-numeric'>"+i+"</td><td id='mac_1'>"+result1[i].macAddress+"</td> <td id='mac_1'>"+result1[i].status+"</td><td id='mac_1'>"+result1[i].ipv4Address+"</td><td id='mac_1'>"+result1[i].bytesReceived+"</td><td id='mac_1'>"+result1[i].bytesSent+"</td><td id='mac_1'>"+result1[i].changedOnTimeStamp+"</td><td id='mac_1'>"+result1[i].ssid+"</td><td id='mac_1'>"+result1[i].changedOn+"</td><td id='mac_1'><a href='/show_site_data?mac="+result1[i].macAddress+"'>link</a></td></tr>");                    
 			}

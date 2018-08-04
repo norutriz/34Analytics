@@ -10,8 +10,11 @@
 <div id="container"></div>
 <script>
 
+
+
+
+
 device_that_are_operating();
-visitors();
 
 function device_that_are_operating(){
 
@@ -21,8 +24,7 @@ var password="C1sco123";
 		url: "https://bypzn2.cmxcisco.com/api/presence/v1/kpisummary/3days?siteId=1533222154202",
 		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
 		success: function(devices){
-		console.log(devices.topManufacturers.manufacturerCounts);
-			console.log(devices.topManufacturers.manufacturerCounts.Apple);
+		
 			//$("#peoaple3").html(devices);
 			var chart = Highcharts.chart('container', {
 
@@ -105,162 +107,6 @@ var password="C1sco123";
 });
 		}
 	});
-}
-
-
-function visitors(){
-
-var username="marius.glod@orange.com";
-var password="C1sco123";
-
-$.ajax({
-    url: "https://bypzn2.cmxcisco.com/api/presence/v1/connected/hourly/yesterday?siteId=1533222154202",
-    headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
-    success: function(visitor){
-    console.log(devices.topManufacturers.manufacturerCounts);
-      console.log(devices.topManufacturers.manufacturerCounts.Apple);
-      //$("#peoaple3").html(devices);
-      var chart = Highcharts.chart('container', {
-
-  chart: {
-    type: 'column'
-  },
-
-  title: {
-    text: 'Hourly connected devices, yesterday'
-  },
-
-  subtitle: {
-    text: ''
-  },
-
-  legend: {
-    align: 'right',
-    verticalAlign: 'middle',
-    layout: 'vertical'
-  },
-
-  xAxis: {
-    categories: ['0', '1', '2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
-    labels: {
-      x: -10
-    }
-  },
-
-  yAxis: {
-    allowDecimals: false,
-    title: {
-      text: 'Amount'
-    }
-  },
-
-  series: [{
-  name:'0',
-    data: [visitor.peakSummary.hourlyCounts."0"]
-  }, {
-   name:'1',
-    data: [visitor.peakSummary.hourlyCounts."1"]
-  }, {
-    name:'2',
-    data: [visitor.peakSummary.hourlyCounts."2"]
-  }, {
-    name:'3',
-    data: [visitor.peakSummary.hourlyCounts."3"]
-  }, {
-  name:'4',
-    data: [visitor.peakSummary.hourlyCounts."4"]
-  }, {
-   name:'5',
-    data: [visitor.peakSummary.hourlyCounts."5"]
-  }, {
-    name:'6',
-    data: [visitor.peakSummary.hourlyCounts."6"]
-  }, {
-    name:'7',
-    data: [visitor.peakSummary.hourlyCounts."7"]
-  }, {
-    name:'8',
-    data: [visitor.peakSummary.hourlyCounts."8"]
-  }, {
-   name:'9',
-    data: [visitor.peakSummary.hourlyCounts."9"]
-  }, {
-    name:'10',
-    data: [visitor.peakSummary.hourlyCounts."10"]
-  }, {
-    name:'11',
-    data: [visitor.peakSummary.hourlyCounts."11"]
-  }, {
-  name:'12',
-    data: [visitor.peakSummary.hourlyCounts."12"]
-  }, {
-   name:'13',
-    data: [visitor.peakSummary.hourlyCounts."13"]
-  }, {
-    name:'14',
-    data: [visitor.peakSummary.hourlyCounts."14"]
-  }, {
-    name:'15',
-    data: [visitor.peakSummary.hourlyCounts."15"]
-  }, {
-    name:'16',
-    data: [visitor.peakSummary.hourlyCounts."16"]
-  }, {
-    name:'17',
-    data: [visitor.peakSummary.hourlyCounts."17"]
-  }, {
-   name:'18',
-    data: [visitor.peakSummary.hourlyCounts."18"]
-  }, {
-    name:'19',
-    data: [visitor.peakSummary.hourlyCounts."19"]
-  }, {
-    name:'20',
-    data: [visitor.peakSummary.hourlyCounts."20"]
-  }, {
-  name:'21',
-    data: [visitor.peakSummary.hourlyCounts."21"]
-  }, {
-   name:'22',
-    data: [visitor.peakSummary.hourlyCounts."22"]
-  }, {
-    name:'23',
-    data: [visitor.peakSummary.hourlyCounts."23"]
-  }],
-
-  responsive: {
-    rules: [{
-      condition: {
-        maxWidth: 500
-      },
-      chartOptions: {
-        legend: {
-          align: 'center',
-          verticalAlign: 'bottom',
-          layout: 'horizontal'
-        },
-        yAxis: {
-          labels: {
-            align: 'left',
-            x: 0,
-            y: -5
-          },
-          title: {
-            text: null
-          }
-        },
-        subtitle: {
-          text: null
-        },
-        credits: {
-          enabled: false
-        }
-      }
-    }]
-  }
-});
-    }
-  });
 }
 
 
