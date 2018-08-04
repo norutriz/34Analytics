@@ -42,8 +42,80 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+	div#main_page {
+    margin-top: -115px;
+}
     </style>
-  </head>
+<style>
+div#main_page {
+    background-color: cornflowerblue;
+    font-size: 26px;
+    font-family: sans-serif;
+    height: 110px;
+}
+div#all_peoaple {
+    margin-left: 137px;
+    margin-top: 39px;
+    font-size: 41px;
+}
+}
+div#all_peoaple_2 {
+        margin-left: 137px;
+    margin-top: 39px;
+    background-color: yellow;
+	 font-size: 26px;
+    font-family: sans-serif;
+    height: 110px;
+}
+div#all_peoaple_2 {
+    margin-left: 389px;
+    background-color: yellow;
+    height: 109px;
+    width: 300px;
+    margin-top: -55px;
+}
+}
+div#peoaple2 {
+    margin-left: 146px;
+    font-size: 26px;
+    margin-top: 1px;
+}
+div#peoaple2,#peoaple3,#peoaple4 {
+    margin-left: 146px;
+    font-size: 52px;
+    margin-top: 1px;
+    position: absolute;
+    top: 59px;
+}
+div#all_peoaple_3 {
+    margin-left: 730px;
+    background-color: green;
+    width: 344px;
+    height: 117px;
+    margin-top: -113px;
+}
+#container {
+  height: 300px;
+  min-width: 1100px;
+  max-width: 1100px;
+}
+div#container {
+    margin-top: 158px;
+}
+table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp {
+    margin-left: -311px;
+}
+div#peoaple4 {
+    position: absolute;
+    left: 359px;
+	z-index:10 !important;
+}
+.Summary {
+    margin-left: -785px;
+	z-index:11 !important;
+}
+</style>
+	</head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
@@ -87,25 +159,33 @@
           </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(1);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(2);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>MAC Adress</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(3);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Statics</a>
+          <a class="mdl-navigation__link" href="#" onclick="find_page(4);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
+          <a class="mdl-navigation__link" href="" onclick="find_page(5);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
+          <a class="mdl-navigation__link" href="" onclick="find_page(6);"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+          <a class="mdl-navigation__link" href="/logout"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Logout</a>
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
-          
-          <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+          <div class=" main_page_1">
+<div id="all_peoaple" ><div class="topV_1"><center> Summary <div id="peoaple4"></div></center></div></div>
+<div id="all_peoaple_2" ><div class="topV"><center>Total Visitors <div id="peoaple2"></div></center></div></div>
+<div id="all_peoaple_3" ><div class="topV_2"><center>Last 5 hours <div id="peoaple3"></div></center></div></div>
+</div>
+
+
+          <div id="main_page" class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
             
           </div>
+		  <div id="page_adadassd">
+		  </div>
         </div>
       </main>
     </div>
@@ -172,6 +252,93 @@
  $("#profile_pic").html("<img src='../static/images/"+result[0][4]+"' class='demo-avatar'>");
         $("#UNMA_user").html(result[0][3]);
     }});
+
+</script>
+<script>
+var username="marius.glod@orange.com";
+var password="C1sco123";
+   $.ajax({
+	//	url: "https://bypzn2.cmxcisco.com/api/presence/v1/clients/?siteId=1533222154202&macaddress=4C-0F-6E-FF-D7-BB",
+		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
+		success: function(result){
+			console.log(result);
+		}
+	});
+
+</script>
+
+<script>
+$("#main_page").load("/page_1");
+
+function find_page(page){
+
+
+if(page==1){
+$("#main_page").load("/page_1");
+
+
+}else if(page==2){
+$("#main_page").load("/page_2");
+}else if(page==3){
+$("#main_page").load("/page_3");
+
+}
+
+}
+
+lastweek();
+max_day();
+
+function lastweek(){
+
+var username="marius.glod@orange.com";
+var password="C1sco123";
+   $.ajax({
+		url: "https://bypzn2.cmxcisco.com/api/presence/v1/connected/total/lastweek?siteId=1533222154202",
+		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
+		success: function(result){
+			console.log(result);
+			$("#peoaple4").html(result);
+		}
+	});
+}
+
+
+function max_day(){
+
+var username="marius.glod@orange.com";
+var password="C1sco123";
+   $.ajax({
+		url: "https://bypzn2.cmxcisco.com/api/presence/v1/visitor/weeksummary?siteId=1533222154202",
+		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
+		success: function(result1){
+		
+			$("#peoaple2").html(result1.maxDay);
+		}
+	});
+}
+
+max_day_hours_stayed();
+
+function max_day_hours_stayed(){
+
+var username="marius.glod@orange.com";
+var password="C1sco123";
+   $.ajax({
+		url: "https://bypzn2.cmxcisco.com/api/presence/v1/dwell/count?siteId=1533222154202&date=2018-08-03",
+		headers: { 'Authorization': "Basic " + btoa(username + ":" + password) },
+		success: function(result1){
+			
+			$("#peoaple3").html(result1.ONE_TO_FIVE_HOURS);
+		}
+	});
+}
+
+
+
+</script>
+<script>
+
 
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

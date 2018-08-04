@@ -213,3 +213,104 @@ _:-ms-input-placeholder, :root .demo-graph {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #490911;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#login_container{
+  text-align: center;
+  padding: 20%;
+  z-index: 99999;
+  display: block;
+  margin-bottom: 75%;
+  position: fixed;
+  margin-top: -60%;
+  background-color: "#6d0d0d91";
+}
+
+.login_container {
+    position: absolute;
+    top: 2px;
+    margin-left: 21%;
+}
+form {
+    margin-top: -22%;
+}
+body {
+    overflow-y: hidden;
+}
+.login_container {
+    position: absolute;
+    top: 280px;
+    margin-left: 41%;
+}
+
+.mdl-textfield__input {
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+}
